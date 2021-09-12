@@ -28,8 +28,12 @@
       <el-menu-item index="4" @click="openLink('https://docs.rakwireless.com.cn/RUI', '_blank')">RAK服务</el-menu-item>
     </el-menu>
     <div class="loginBox">
-      <span>登录</span>
-      <span class="ml10">注册</span>
+      <span>
+        <router-link to="/login">登录</router-link>
+      </span>
+      <span class="ml10">
+        <router-link to="/register">注册</router-link>
+      </span>
     </div>
   </div>
 </div>
