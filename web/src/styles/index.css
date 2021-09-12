@@ -6,6 +6,7 @@ body {
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #F2F2F2;
 }
 
 label {
@@ -78,4 +79,27 @@ div:focus {
 
 .inlineBlock {
   display: block;
+}
+.ml10{
+  margin-left: 10px;
+}
+.mr10{
+  margin-right: 10px;
+}
+
+/* navbar */
+.el-menu.el-menu--horizontal{
+  border-bottom: none;
+}
+.el-submenu__title i{
+ color: #fff; 
+}
+.el-menu-item,.el-submenu>div,.is-active,.is-active>div{
+  border-bottom: none!important;;
+}
+.is-active{
+  background-color: #0A569D!important;
+}
+.is-active>div{
+  background-color: #0A569D!important;
 }

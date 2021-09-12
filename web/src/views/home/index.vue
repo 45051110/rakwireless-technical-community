@@ -1,12 +1,47 @@
 <template>
   <div class="container">
-
+    <el-row :gutter="15">
+      <el-col :span="12">
+        <div class="grid-content bg-purple-dark">
+          <Carousel></Carousel>
+        </div>
+      </el-col>
+      <el-col :span="6">
+        <div class="grid-content bg-purple-dark">
+          <KeySectors></KeySectors>
+        </div>
+      </el-col>
+      <el-col :span="6">
+        <div class="grid-content bg-purple-dark">
+          <SmartRobot></SmartRobot>
+        </div>
+      </el-col>
+    </el-row>
+     <el-row>
+      <el-col :span="24">
+        <div class="grid-content bg-purple-dark">
+          <Raknews></Raknews>
+        </div>
+      </el-col>
+    </el-row>
+    <div></div>
   </div>
 </template>
 
 <script>
+import Carousel from '@/components/carousel';
+import KeySectors from '@/components/keySectors';
+import SmartRobot from '@/components/smartRobot';
+import Raknews from '@/components/raknews';
+
 export default {
   name: 'Home',
+  components: {
+    Carousel,
+    KeySectors,
+    SmartRobot,
+    Raknews,
+  },
   data() {
     return {
     };
@@ -18,9 +53,10 @@ export default {
 <style scoped>
 .container{
   width: calc( 100vw - 100% + 1220px ) !important;
-  padding-left: calc( 100vw - 100% + 10px );
-  height: 500px;
-  background: red;
+  /* height: 100%; */
+  /* background: #fff; */
   margin: 0 auto;
+  margin-top:15px;
 }
+
 </style>

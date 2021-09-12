@@ -2,17 +2,23 @@
   <div id="app">
     <Nav />
     <router-view keep-alive/>
-    <div>footer</div>
+    <div>
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script>
 
-import nav from '@/components/nav';
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
 
 export default {
   name: 'App',
-  components: { Nav: nav },
+  components: { 
+    Nav,
+    Footer,
+  },
 };
 </script>
 
