@@ -16,7 +16,6 @@ export default {
     }
 };
 </script>
-
 <style lang="less" scope>
 .footer {
     width: calc(100vw - 100% + 1220px) !important;

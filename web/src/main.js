@@ -8,7 +8,6 @@ import less from 'less'
 import App from './App';
 import router from './router';
 
-
 Vue.use(less)
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
