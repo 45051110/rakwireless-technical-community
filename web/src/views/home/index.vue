@@ -53,10 +53,9 @@ export default {
 <style scoped>
 .container{
   width: calc( 100vw - 100% + 1220px ) !important;
-  /* height: 100%; */
-  /* background: #fff; */
   margin: 0 auto;
   margin-top:15px;
+  margin-bottom: 80px;
 }
 
 </style>

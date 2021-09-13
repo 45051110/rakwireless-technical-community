@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h3>这是登陆界面</h3>
     <input type="text" placeholder="请输入用户名" v-model="username" />
     <input type="password" placeholder="请输入密码" v-model="password" />
@@ -21,7 +21,12 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
+.container{
+  width: calc( 100vw - 100% + 1220px ) !important;
+  height: calc(100vh - 229px);
+  margin: 0 auto;
+}
 .login-wrap {
   text-align: center;
 }
