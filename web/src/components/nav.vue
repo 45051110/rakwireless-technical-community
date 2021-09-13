@@ -1,7 +1,9 @@
 <template>
 <div class="navBox">
   <div class="navbar">
-    <img src="@/assets/logo.png" class="logoImg">
+    <router-link to="/">
+      <img src="@/assets/logo.png" class="logoImg" >
+    </router-link>
     <el-menu
       :default-active="activeIndex2"
       class="elNav"

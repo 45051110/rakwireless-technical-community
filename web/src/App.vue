@@ -2,7 +2,7 @@
   <div id="app">
     <Nav />
     <router-view keep-alive/>
-    <div>
+    <div class="footerBox">
       <Footer />
     </div>
   </div>
@@ -22,6 +22,11 @@ export default {
 };
 </script>
 
-<style >
+<style scoped>
+
+.footerBox{
+  width: 100%;
+  background: #E5E5E5;
+}
 </style>
 <style src="./styles/index.css">

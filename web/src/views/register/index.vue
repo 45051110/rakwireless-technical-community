@@ -1,5 +1,5 @@
 <template>
-  <div class="mainBox">
+  <div class="container">
     <h3>这是注册界面</h3>
     <input type="text" placeholder="请输入手机号" v-model="newUsernumber" />
     <input type="text" placeholder="请输入用户名" v-model="newUsername" />
@@ -24,13 +24,11 @@ export default {
   },
 };
 </script>
-<style>
-.mainBox{
+<style scoped>
+.container{
   width: calc( 100vw - 100% + 1220px ) !important;
-  /* height: calc(100% - 150px) !important; */
-  /* background: #fff; */
+  height: calc(100vh - 229px);
   margin: 0 auto;
-  margin-top:15px;
 }
 .login-wrap {
   text-align: center;

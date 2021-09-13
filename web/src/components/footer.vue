@@ -21,13 +21,15 @@ export default {
 
 <style scoped>
 .footer{
+  width: calc( 100vw - 100% + 1220px ) !important;
   text-align: center;
   border-top: 1px solid #ddd;
-  margin: 80px 0;
   padding: 40px;
-  background: #E5E5E5;
+  margin: 0 auto;
 }
 .footer>div{
   margin-top:15px;
 }
+@import './styles/index.css';
 </style>
+
