@@ -29,10 +29,10 @@
 </template>
 
 <script>
-import Carousel from '@/components/carousel';
-import KeySectors from '@/components/keySectors';
-import SmartRobot from '@/components/smartRobot';
-import Raknews from '@/components/raknews';
+import Carousel from './carousel';
+import KeySectors from './keySectors';
+import SmartRobot from './smartRobot';
+import Raknews from './raknews';
 
 export default {
   name: 'Home',

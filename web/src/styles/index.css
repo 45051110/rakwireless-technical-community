@@ -97,9 +97,3 @@ div:focus {
 .el-menu-item,.el-submenu>div,.is-active,.is-active>div{
   border-bottom: none!important;;
 }
-.is-active{
-  background-color: #0A569D!important;
-}
-.is-active>div{
-  background-color: #0A569D!important;
-}
