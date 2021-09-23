@@ -3,10 +3,15 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import less from 'less'
+import less from 'less';
+import axios from 'axios';
 
 import App from './App';
 import router from './router';
+
+require('./mock');
+
+Vue.prototype.$axios = axios;
 
 Vue.use(less)
 Vue.config.productionTip = false;
