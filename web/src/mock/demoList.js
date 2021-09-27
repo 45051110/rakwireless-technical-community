@@ -21,5 +21,62 @@ export default {
         }
       ]
     };
-  }
+  },
+  'get|/api/index/getNews': option => {
+    return {
+      status: 200,
+      message: 'success',
+      data: [
+        {
+          id: "1111",
+          img:
+            "https://news.rakwireless.com.cn/content/images/size/w1000/2020/11/The-app.png",
+          title: "顺势而为：为什么我们从一开始就相信Helium做的是对的",
+          author: "Helium blockchain",
+          releaseTime: "10个月前"
+        },
+
+        {
+          id: "33333",
+          img:
+            "https://news.rakwireless.com.cn/content/images/size/w100/2020/03/temp.jhttps://news.rakwireless.com.cn/content/images/size/w1000/2020/11/The-app.png",
+          title: "顺势而为：为什么我们从一开始就相信Helium做的是对的",
+          author: "Helium blockchain",
+          releaseTime: "10个月前"
+        },
+        {
+          id: "44444",
+          img:
+            "https://news.rakwireless.com.cn/content/images/size/w1000/2020/11/The-app.png",
+          title: "顺势而为：为什么我们从一开始就相信Helium做的是对的",
+          author: "Helium blockchain",
+          releaseTime: "10个月前"
+        },
+        {
+          id: "55555",
+          img:
+            "https://news.rakwireless.com.cn/content/images/size/w1000/2020/11/The-app.png",
+          title: "顺势而为：为什么我们从一开始就相信Helium做的是对的",
+          author: "Helium blockchain",
+          releaseTime: "10个月前"
+        },
+        {
+          id: "66666",
+          img:
+            "https://news.rakwireless.com.cn/content/images/size/w1000/2020/11/The-app.png",
+          title: "顺势而为：为什么我们从一开始就相信Helium做的是对的",
+          author: "Helium blockchain",
+          releaseTime: "10个月前"
+        },
+        {
+          id: "77777",
+          img:
+            "https://news.rakwireless.com.cn/content/images/size/w1000/2020/11/The-app.png",
+          title: "顺势而为：为什么我们从一开始就相信Helium做的是对的",
+          author: "Helium blockchain",
+          releaseTime: "10个月前"
+        }
+      ]
+    }
+  },
 };

@@ -6,43 +6,59 @@
         </div>
         <div>
             <el-col :span="12">
-                <div shadow="hover" class="roboItem mr10">
-                    AC/BA/SG
+                <div class="roboItem mr10">
+                    <div shadow="hover">
+                        LPWAN 网关 Wisgate
+                    </div>
                 </div>
             </el-col>
             <el-col :span="12">
-                <div shadow="hover" class="roboItem">
-                    aDesk/EDS
+                <div class="roboItem mr10">
+                    <div shadow="hover">
+                        LPWAN 终端 WisNode
+                    </div>
                 </div>
             </el-col>
             <el-col :span="12">
-                <div shadow="hover" class="roboItem mr10">
-                    AF
+                <div class="roboItem mr10">
+                    <div shadow="hover">
+                        LPWAN 模块化产品 Wisblock
+                    </div>
                 </div>
             </el-col>
             <el-col :span="12">
-                <div shadow="hover" class="roboItem">
-                    SSL VPN/EMM
+                <div class="roboItem">
+                    <div shadow="hover">
+                        LPWAN节点模块 WisDuo
+                    </div>
                 </div>
             </el-col>
             <el-col :span="12">
-                <div shadow="hover" class="roboItem mr10">
-                    HCI
+                <div class="roboItem mr10">
+                    <div shadow="hover">
+                        LPWAN IoT传感终端 Wistrio
+                    </div>
                 </div>
             </el-col>
             <el-col :span="12">
-                <div shadow="hover" class="roboItem">
-                    WOC/aBOS/MIG
+                <div class="roboItem">
+                    <div shadow="hover">
+                        LPWAN 网关模块
+                    </div>
                 </div>
             </el-col>
             <el-col :span="12">
-                <div shadow="hover" class="roboItem mr10">
-                    DAS
+                <div class="roboItem mr10">
+                    <div shadow="hover">
+                        LPWAN 树莓派扩展板
+                    </div>
                 </div>
             </el-col>
             <el-col :span="12">
-                <div shadow="hover" class="roboItem">
-                    联合产品
+                <div class="roboItem">
+                    <div shadow="hover">
+                        LPWAN 节点扩展板
+                    </div>
                 </div>
             </el-col>
             <el-col :span="24">
@@ -82,14 +98,21 @@ export default {
 }
 .roboItem {
     height: 35px;
-    line-height: 35px;
-    font-size: 14px;
-    text-align: center;
-    background: #f4f7ff;
     border-radius: 4px;
+    background: #f4f7ff;
     border: 1px solid #ebf0f8;
-    cursor: pointer;
+    width: 100%;
+    text-align: center;
     margin-top: 10px;
+}
+.roboItem > div {
+    height: 35px;
+    width: 150px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    display: table-cell;
+    vertical-align: middle;
 }
 .roboItem:hover {
     border: 1px solid #83c3fd;
