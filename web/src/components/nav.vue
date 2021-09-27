@@ -67,7 +67,11 @@
                         问答
                     </router-link>
                 </el-menu-item>
-                <el-menu-item index="3">下载中心</el-menu-item>
+                <el-menu-item index="3">
+                    <router-link to="/download"
+                        >下载中心</router-link
+                    ></el-menu-item
+                >
                 <el-menu-item
                     index="4"
                     @click="

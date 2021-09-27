@@ -6,6 +6,7 @@ import Login from '@/views/login/index';
 import Register from '@/views/register/index';
 import Search from '@/views/search/index';
 import PostCenter from '@/views/postCenter/index';
+import Download from '@/views/download/index';
 
 
 Vue.use(Router);
@@ -36,6 +37,11 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: Search,
+    },
+    {
+      path: '/download',
+      name: 'Download',
+      component: Download,
     },
   ],
 });

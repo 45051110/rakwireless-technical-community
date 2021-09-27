@@ -39,7 +39,7 @@ export default {
         {
           id: "33333",
           img:
-            "https://news.rakwireless.com.cn/content/images/size/w100/2020/03/temp.jhttps://news.rakwireless.com.cn/content/images/size/w1000/2020/11/The-app.png",
+            "https://news.rakwireless.com.cn/content/images/size/w1000/2020/11/The-app.png",
           title: "顺势而为：为什么我们从一开始就相信Helium做的是对的",
           author: "Helium blockchain",
           releaseTime: "10个月前"
