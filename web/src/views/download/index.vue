@@ -164,7 +164,7 @@ export default {
 }
 .doenloadTitle {
     color: #0c6bc4;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px;
     text-align: center;
 }
