@@ -32,7 +32,9 @@
                             </el-input>
                         </div>
                         <div class="searchBtn">
-                            <el-button>搜索答案</el-button>
+                            <el-button @click="openSearch()"
+                                >搜索答案</el-button
+                            >
                             <el-button type="primary">发表提问</el-button>
                         </div>
                     </div>
@@ -55,6 +57,13 @@ export default {
     },
     data() {
         return {};
+    },
+    methods: {
+        openSearch() {
+            this.$router.push({
+                path: "/search"
+            });
+        }
     }
 };
 </script>

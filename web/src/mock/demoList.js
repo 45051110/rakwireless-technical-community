@@ -79,4 +79,12 @@ export default {
       ]
     }
   },
+  'post|/api/register': option => {
+    return {
+      status: 200,
+      message: 'success'
+      //success 成功
+      // error 失败
+    }
+  },
 };

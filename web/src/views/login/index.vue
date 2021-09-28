@@ -1,76 +1,77 @@
 <template>
-  <div class="container">
-    <h3>这是登陆界面</h3>
-    <input type="text" placeholder="请输入用户名" v-model="username" />
-    <input type="password" placeholder="请输入密码" v-model="password" />
-    <button v-on:click="login">登录</button>
-    <p>
-      <router-link to="/register">没有账号？马上注册</router-link>
-    </p>
-    <!-- <p v-on:click="ToRegister">没有账号？马上注册</p> -->
-    <br />
-    <!-- <router-link to="/">返回</router-link> -->
-  </div>
+    <div class="container">
+        <div class="btnBox">
+            <el-input v-model="username" placeholder="请输入用户名"></el-input>
+            <el-input
+                placeholder="请输入密码"
+                v-model="password"
+                show-password
+            ></el-input>
+            <el-button type="success" v-on:click="loginMethod">登 录</el-button>
+
+            <p>
+                <router-link to="/register">没有账号？马上注册</router-link>
+            </p>
+        </div>
+    </div>
 </template>
 <script>
+import { login } from "@/api/server";
 export default {
-  name: 'Login',
-  data() {
-    return {
-    };
-  },
+    name: "Login",
+    data() {
+        return {
+            username: "",
+            password: ""
+        };
+    },
+    methods: {
+        loginMethod() {
+            let param = {};
+            param.username = this.username;
+            param.password = this.password;
+
+            login(param)
+                .then(res => {
+                    if (res.data.status === 200) {
+                        // if (res.data.message === "success") {
+                        //     this.registerSuccess = true;
+                        //     this.registerResult = "注册成功!";
+                        //     this.registerIcon = "success";
+                        // } else {
+                        //     this.registerSuccess = true;
+                        //     this.registerResult = "注册失败!";
+                        //     this.registerIcon = "error";
+                        // }
+                    }
+                })
+                .catch(err => {});
+        }
+    }
 };
 </script>
-<style scoped>
-.container{
-  width: calc( 100vw - 100% + 1220px ) !important;
-  height: calc(100vh - 229px);
-  margin: 0 auto;
+<style lang="less" scoped>
+.container {
+    width: calc(100vw - 100% + 1220px) !important;
+    height: calc(100vh - 210px);
+    margin: 0 auto;
 }
-.login-wrap {
-  text-align: center;
+.btnBox {
+    padding: 60px 0;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    .el-input {
+        margin-bottom: 20px;
+    }
+    button {
+        width: 400px;
+        font-size: 18px;
+    }
 }
-h3 {
-  text-align: center;
-}
-span {
-  text-align: center;
-}
-input {
-  display: block;
-  width: 250px;
-  height: 40px;
-  line-height: 40px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  outline: none;
-  border: 1px solid #888;
-  padding: 10px;
-  box-sizing: border-box;
-}
+
 p {
-  color: red;
-  text-align: center;
-}
-
-button {
-  display: block;
-  width: 250px;
-  height: 40px;
-  line-height: 40px;
-  margin: 0 auto;
-  border: none;
-  background-color: #41b883;
-  color: #fff;
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-span {
-  cursor: pointer;
-}
-
-span:hover {
-  color: #41b883;
+    color: red;
+    text-align: center;
 }
 </style>

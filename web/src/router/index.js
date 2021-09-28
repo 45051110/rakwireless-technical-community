@@ -6,6 +6,7 @@ import Login from '@/views/login/index';
 import Register from '@/views/register/index';
 import Search from '@/views/search/index';
 import PostCenter from '@/views/postCenter/index';
+import EditPost from '@/views/editPost/index';
 import Download from '@/views/download/index';
 
 
@@ -32,6 +33,11 @@ export default new Router({
       path: '/postCenter',
       name: 'PostCenter',
       component: PostCenter,
+    },
+    {
+      path: '/editPost',
+      name: 'EditPost',
+      component: EditPost,
     },
     {
       path: '/search',
