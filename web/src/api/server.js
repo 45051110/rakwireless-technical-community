@@ -7,6 +7,17 @@ export function getNews(token) {
   let url = "/api/index/getNews";
   return axios.get(url, { params: { token } })
 }
+export function createPost(param) {
+  let url = "/api/createPost";
+  return axios.post(url, {
+    params:
+    {
+      author: param.author,
+      title: param.title,
+      content: param.content
+    }
+  })
+}
 export function register(param) {
   let url = "/api/register";
   return axios.post(url, {

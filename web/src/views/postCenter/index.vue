@@ -32,10 +32,12 @@
                             </el-input>
                         </div>
                         <div class="searchBtn">
-                            <el-button @click="openSearch()"
-                                >搜索答案</el-button
-                            >
-                            <el-button type="primary">发表提问</el-button>
+                            <el-button @click="openSearch()">
+                                搜索答案
+                            </el-button>
+                            <el-button type="primary" @click="openCreatePost()">
+                                发表提问
+                            </el-button>
                         </div>
                     </div>
                 </el-col>
@@ -62,6 +64,11 @@ export default {
         openSearch() {
             this.$router.push({
                 path: "/search"
+            });
+        },
+        openCreatePost() {
+            this.$router.push({
+                path: "/editPost"
             });
         }
     }

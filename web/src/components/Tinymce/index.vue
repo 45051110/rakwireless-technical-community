@@ -131,12 +131,13 @@ export default {
             const _this = this;
             window.tinymce.init({
                 selector: `#${this.tinymceId}`,
-                language: this.languageTypeList["en"],
+                language: this.languageTypeList["zh"],
                 height: this.height,
                 body_class: "panel-body ",
                 object_resizing: false,
                 toolbar: this.toolbar.length > 0 ? this.toolbar : toolbar,
                 menubar: this.menubar,
+                fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",
                 plugins: plugins,
                 end_container_on_empty_block: true,
                 powerpaste_word_import: "clean",

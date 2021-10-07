@@ -7,7 +7,7 @@
             type="primary"
             @click="dialogVisible = true"
         >
-            upload
+            上传图片
         </el-button>
         <el-dialog :visible.sync="dialogVisible">
             <el-upload
@@ -63,7 +63,7 @@ export default {
             const arr = Object.keys(this.listObj).map(v => this.listObj[v]);
             if (!this.checkAllSuccess()) {
                 this.$message(
-                    "Please wait for all images to be uploaded successfully. If there is a network problem, please refresh the page and upload again!"
+                    "请等待图片上传完毕,如果因网络问题上传失败,请刷新后重新上传!"
                 );
                 return;
             }
