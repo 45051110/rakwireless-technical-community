@@ -49,18 +49,18 @@
 <script>
 import Tinymce from "@/components/Tinymce";
 import { createPost } from "@/api/server";
+
 export default {
     name: "EditPost",
     components: { Tinymce },
     data() {
         const validateRequire = (rule, value, callback) => {
             console.log(value);
-            debugger;
             if (!value) {
-                this.$message({
-                    message: rule.field + "为必传项",
-                    type: "error"
-                });
+                // this.$message({
+                //     message: rule.field + "为必传项",
+                //     type: "error"
+                // });
                 callback(new Error(rule.field + "为必传项"));
             } else {
                 callback();
@@ -80,47 +80,48 @@ export default {
     },
     methods: {
         draftForm() {
-            if (
-                this.postForm.content.length === 0 ||
-                this.postForm.title.length === 0
-            ) {
-                this.$message({
-                    message: "请填写必要的标题和内容",
-                    type: "warning"
-                });
-                return;
-            }
-            this.$message({
-                message: "保存成功",
-                type: "success",
-                showClose: true,
-                duration: 1000
-            });
             this.postForm.status = "draft";
-        },
-        submitForm() {
             this.$refs.postForm.validate(valid => {
-                createPost(this.postForm)
-                    .then(res => {
-                        if (res.data.status === 200) {
-                            console.log(res.data);
-                            this.dataList = res.data.data;
-                        }
-                    })
-                    .catch(err => {});
                 if (valid) {
                     this.loading = true;
-                    this.$notify({
-                        title: "成功",
-                        message: "发布文章成功",
-                        type: "success",
-                        duration: 2000
-                    });
-                    this.postForm.status = "published";
-                    this.loading = false;
-                } else {
-                    console.log("error submit!!");
-                    return false;
+                    createPost(this.postForm)
+                        .then(res => {
+                            if (res.data.status === 200) {
+                                console.log(res.data);
+                                this.dataList = res.data.data;
+                                this.$notify({
+                                    title: "保存",
+                                    message: "草稿已保存",
+                                    type: "success",
+                                    duration: 2000
+                                });
+                                this.loading = false;
+                            }
+                        })
+                        .catch(err => {});
+                }
+            });
+        },
+        submitForm() {
+            this.postForm.status = "published";
+            this.$refs.postForm.validate(valid => {
+                if (valid) {
+                    this.loading = true;
+                    createPost(this.postForm)
+                        .then(res => {
+                            if (res.data.status === 200) {
+                                console.log(res.data);
+                                this.dataList = res.data.data;
+                                this.$notify({
+                                    title: "成功",
+                                    message: "发布文章成功",
+                                    type: "success",
+                                    duration: 2000
+                                });
+                                this.loading = false;
+                            }
+                        })
+                        .catch(err => {});
                 }
             });
         }
@@ -134,7 +135,7 @@ export default {
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 80px;
-    height: calc(100% - 305px);
+    height: calc(100% - 330px);
 }
 .editor-content {
     margin-top: 20px;

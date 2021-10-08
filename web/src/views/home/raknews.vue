@@ -7,8 +7,16 @@
             <div class="itemList">
                 <el-col :span="8" v-for="item in dataList" :key="item.id">
                     <el-card shadow="hover" class="rakNewsItem">
-                        <img :src="item.img" alt="" class="rakNewsItemImg" />
-                        <div class="rakNewsItemTile">
+                        <img
+                            :src="item.img"
+                            alt=""
+                            class="rakNewsItemImg"
+                            @click="showDetail(item.id)"
+                        />
+                        <div
+                            class="rakNewsItemTile"
+                            @click="showDetail(item.id)"
+                        >
                             <a
                                 href="https://news.rakwireless.com.cn/tag/helium-blockchain/"
                                 class="articleNameBox"
@@ -52,6 +60,11 @@ export default {
                     }
                 })
                 .catch(err => {});
+        },
+        showDetail(id) {
+            this.$router.push({
+                path: "/news/" + id
+            });
         }
     }
 };

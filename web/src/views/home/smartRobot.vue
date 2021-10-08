@@ -86,11 +86,11 @@ export default {
 .smartRobot {
     height: 280px;
     padding: 7px 10px 18px;
-    border-top: 5px solid #0c6bc4;
+    border-top: 5px solid #006ac6;
     background: #fff;
 }
 .icon {
-    background: #0c6bc4;
+    background: #006ac6;
     color: #fff;
 }
 .robotTitle {

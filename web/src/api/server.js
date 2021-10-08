@@ -12,11 +12,16 @@ export function createPost(param) {
   return axios.post(url, {
     params:
     {
+      status: param.status,
       author: param.author,
       title: param.title,
       content: param.content
     }
   })
+}
+export function getNewsDetail(id) {
+  let url = "/api/getNewsDetail";
+  return axios.get(url, { params: { id: id } })
 }
 export function register(param) {
   let url = "/api/register";

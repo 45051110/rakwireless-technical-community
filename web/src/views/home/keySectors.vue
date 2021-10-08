@@ -110,7 +110,7 @@ export default {
     img {
         width: 60%;
     }
-    color: #0c6bc4;
+    color: #006ac6;
 }
 .keySectorItemTile {
     text-align: center;

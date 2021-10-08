@@ -145,11 +145,11 @@ export default {
         cursor: pointer;
     }
     div:hover {
-        color: #0c6bc4;
+        color: #006ac6;
     }
     .active {
-        border-bottom: 6px solid #0c6bc4;
-        color: #0c6bc4;
+        border-bottom: 6px solid #006ac6;
+        color: #006ac6;
     }
 }
 .downloadDiv {
@@ -163,7 +163,7 @@ export default {
     }
 }
 .doenloadTitle {
-    color: #0c6bc4;
+    color: #006ac6;
     font-size: 14px;
     margin-bottom: 10px;
     text-align: center;

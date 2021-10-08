@@ -9,7 +9,7 @@
                 class="elNav"
                 mode="horizontal"
                 @select="handleSelect"
-                background-color="#0c6bc4"
+                background-color="#006ac6"
                 text-color="#fff"
                 active-text-color="#fff"
             >
@@ -116,7 +116,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .navBox {
-    background: #0c6bc4;
+    background: #006ac6;
 }
 .navbar {
     width: calc(100vw - 100% + 1220px) !important;
