@@ -95,9 +95,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .container {
-    width: calc(100vw - 100% + 1220px) !important;
-    height: calc(100vh - 210px);
-    margin: 0 auto;
+    background: transparent;
 }
 .btnBox {
     padding: 60px 0;

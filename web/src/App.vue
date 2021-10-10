@@ -26,6 +26,7 @@ export default {
 
 .footerBox{
   width: 100%;
+  height: 150px;
   background: #E5E5E5;
 }
 </style>

@@ -18,7 +18,7 @@
 <script>
 import { login } from "@/api/server";
 export default {
-    name: "Login",
+    name: "Administrator",
     data() {
         return {
             username: "",

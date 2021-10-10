@@ -130,13 +130,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-    width: calc(100vw - 100% + 1220px) !important;
-    margin: 0 auto;
-    margin-top: 15px;
-    margin-bottom: 80px;
-    height: calc(100% - 330px);
-}
 .editor-content {
     margin-top: 20px;
 }

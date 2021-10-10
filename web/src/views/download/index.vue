@@ -124,11 +124,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .container {
-    width: calc(100vw - 100% + 1220px) !important;
-    height: calc(100vh - 225px);
-    margin: 0 auto;
-    margin-top: 15px;
-    background: #fff;
     .el-row {
         padding: 0 40px;
     }

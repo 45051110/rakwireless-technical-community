@@ -106,3 +106,11 @@ img{
 .el-menu-item,.el-submenu>div,.is-active,.is-active>div{
   border-bottom: none!important;;
 }
+/* home */
+.container{
+  width: calc(100vw - 100% + 1220px) !important;
+  margin: 0 auto;
+  min-height: calc(100% - 210px);
+  padding: 15px;
+  background: #fff;
+}

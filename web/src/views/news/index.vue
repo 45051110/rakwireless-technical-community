@@ -1,7 +1,13 @@
 <template>
-    <div class="carousel">
-        <div>{{ dataList.title }}</div>
-        <div>{{ dataList.author }}</div>
+    <div class="container">
+        <h2 class="title">{{ dataList.title }}</h2>
+        <div class="author">
+            <strong>
+                <span>{{ dataList.author }}</span>
+                •
+                <span>{{ dataList.releaseTime }}</span>
+            </strong>
+        </div>
         <div class="editor-content" v-html="dataList.content" />
     </div>
 </template>
@@ -34,4 +40,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.title,
+.author {
+    text-align: center;
+}
+.author {
+    margin-bottom: 60px;
+}
+.editor-content {
+    padding: 0 30px;
+}
+</style>

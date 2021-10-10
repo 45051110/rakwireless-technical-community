@@ -157,3 +157,17 @@ export default {
     background-color: #0a569d !important;
 }
 </style>
+<style>
+.el-menu--popup-bottom-start {
+    background: #fff !important;
+    border-radius: 10px !important;
+    color: #424242 !important;
+}
+.el-menu--popup > .el-menu-item {
+    background: #fff !important;
+    color: #000 !important;
+}
+.el-menu--popup > .el-menu-item:hover {
+    color: #3498db !important;
+}
+</style>

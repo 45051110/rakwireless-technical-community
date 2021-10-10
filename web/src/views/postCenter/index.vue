@@ -77,12 +77,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.container {
-    width: calc(100vw - 100% + 1220px) !important;
-    margin: 0 auto;
-    margin-top: 15px;
-    background: #fff;
-}
 .searchImg {
     width: 100%;
 }
@@ -111,8 +105,5 @@ export default {
 }
 .searchLeft {
     width: calc(100% - 230px);
-}
-.post {
-    padding: 20px;
 }
 </style>

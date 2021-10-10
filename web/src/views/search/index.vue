@@ -47,14 +47,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.container {
-    width: calc(100vw - 100% + 1220px) !important;
-    margin: 0 auto;
-    margin-top: 15px;
-}
 .searchDiv {
     background: #fff;
-    padding: 30px 75px;
+    padding: 30px;
 }
 .hotKey {
     font-weight: 600;
