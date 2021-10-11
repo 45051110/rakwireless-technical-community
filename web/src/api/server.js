@@ -15,7 +15,8 @@ export function createPost(param) {
       status: param.status,
       author: param.author,
       title: param.title,
-      content: param.content
+      content: param.content,
+      token:"sccacasdasdasd"
     }
   })
 }

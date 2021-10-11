@@ -17,6 +17,7 @@
 </template>
 <script>
 import { login } from "@/api/server";
+import { setToken } from "@/utils/auth";
 export default {
     name: "Login",
     data() {
@@ -34,15 +35,16 @@ export default {
             login(param)
                 .then(res => {
                     if (res.data.status === 200) {
-                        // if (res.data.message === "success") {
-                        //     this.registerSuccess = true;
-                        //     this.registerResult = "注册成功!";
-                        //     this.registerIcon = "success";
-                        // } else {
-                        //     this.registerSuccess = true;
-                        //     this.registerResult = "注册失败!";
-                        //     this.registerIcon = "error";
-                        // }
+                        if (res.data.message === "success") {
+                            let tempData = res.data.data;
+                            console.log(tempData);
+                            setToken(tempData.token);
+                            setRole(tempData.role);
+                        } else {
+                            // this.registerSuccess = true;
+                            // this.registerResult = "注册失败!";
+                            // this.registerIcon = "error";
+                        }
                     }
                 })
                 .catch(err => {});

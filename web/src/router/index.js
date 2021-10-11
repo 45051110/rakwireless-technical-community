@@ -39,6 +39,7 @@ export default new Router({
       path: '/editPost',
       name: 'EditPost',
       component: EditPost,
+      meta: { requireAuth: true }
     },
     {
       path: '/search',

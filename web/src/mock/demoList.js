@@ -79,14 +79,6 @@ export default {
       ]
     }
   },
-  'post|/api/register': option => {
-    return {
-      status: 200,
-      message: 'success'
-      //success 成功
-      // error 失败
-    }
-  },
   'get|/api/getNewsDetail': option => {
     return {
       status: 200,
@@ -117,4 +109,32 @@ export default {
       }
     };
   },
+  'post|/api/createPost': option => {
+    return {
+      status: 200,
+      message: 'success'
+    };
+  },
+  'post|/api/register': option => {
+    return {
+      status: 200,
+      message: 'success'
+      //success 成功
+      // error 失败
+    }
+  },
+  'post|/api/login': option => {
+    return {
+      status: 200,
+      message: 'success',
+      data: {
+        id: '123123123',
+        role: 'admin',
+        token: 'token-token123189231823123132'
+      }
+      //success 成功
+      // error 失败
+    }
+  },
+
 };
