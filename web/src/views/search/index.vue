@@ -39,7 +39,8 @@ export default {
                 "测试",
                 "规则库",
                 "aCMP"
-            ]
+            ],
+            input3: ""
         };
     }
 };

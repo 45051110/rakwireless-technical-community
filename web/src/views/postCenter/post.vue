@@ -20,8 +20,10 @@ export default {
     data() {
         return { activeName: "first" };
     },
-    handleClick(tab, event) {
-        console.log(tab, event);
+    methods: {
+        handleClick(tab, event) {
+            console.log(tab, event);
+        }
     }
 };
 </script>

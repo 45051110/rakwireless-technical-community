@@ -58,7 +58,9 @@ export default {
         Post
     },
     data() {
-        return {};
+        return {
+            input3: ""
+        };
     },
     methods: {
         openSearch() {
