@@ -9,6 +9,7 @@ import PostCenter from '@/views/postCenter/index';
 import EditPost from '@/views/editPost/index';
 import Download from '@/views/download/index';
 import News from '@/views/news/index';
+import Blog from '@/views/blog/index';
 import Administrator from '@/views/administrator/index';
 
 Vue.use(Router);
@@ -55,6 +56,11 @@ export default new Router({
       path: '/news/:id',
       name: 'News',
       component: News,
+    },
+    {
+      path: '/blog/:id',
+      name: 'Blog',
+      component: Blog,
     },
     {
       path: '/administrator',

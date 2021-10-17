@@ -14,11 +14,11 @@
             :key="item.id"
         >
             <div class="textItem">
-                <div class="contentTitle">
+                <div class="contentTitle" @click="showDetail(item.id)">
                     {{ item.title }}
                     <span class="tag" v-show="item.hasPic"></span>
                 </div>
-                <div class="contentBody">
+                <div class="contentBody" @click="showDetail(item.id)">
                     {{ item.content }}
                 </div>
                 <div class="otherInfo">
@@ -86,6 +86,11 @@ export default {
         handleCurrentChange(val) {
             this.currentPage = val;
             this.getInitData();
+        },
+        showDetail(id) {
+            this.$router.push({
+                path: "/blog/" + id
+            });
         }
     }
 };
