@@ -16,13 +16,24 @@ export function createPost(param) {
       author: param.author,
       title: param.title,
       content: param.content,
-      token:"sccacasdasdasd"
+      token: "sccacasdasdasd"
     }
   })
 }
 export function getNewsDetail(id) {
   let url = "/api/getNewsDetail";
   return axios.get(url, { params: { id: id } })
+}
+export function getAnswerList(param) {
+  let url = "/api/getAnswerList";
+  return axios.get(url, {
+    params:
+    {
+      currentPage: param.currentPage,
+      pageSize: param.pageSize,
+      type: param.type
+    }
+  })
 }
 export function register(param) {
   let url = "/api/register";

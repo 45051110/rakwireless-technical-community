@@ -8,7 +8,7 @@ import Search from '@/views/search/index';
 import PostCenter from '@/views/postCenter/index';
 import EditPost from '@/views/editPost/index';
 import Download from '@/views/download/index';
-import News from '@/views/News/index';
+import News from '@/views/news/index';
 import Administrator from '@/views/administrator/index';
 
 Vue.use(Router);
