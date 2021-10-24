@@ -124,7 +124,9 @@ export default {
     }
   },
   'post|/api/login': option => {
+
     return {
+      // success
       status: 200,
       message: 'success',
       data: {
@@ -132,8 +134,10 @@ export default {
         role: 'admin',
         token: 'token-token123189231823123132'
       }
-      //success 成功
-      // error 失败
+      // failed
+      // status: 200,
+      // message: 'failed',
+      // context: '密码错误'
     }
   },
   'get|/api/getAnswerList': option => {

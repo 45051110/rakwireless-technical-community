@@ -32,12 +32,19 @@
                             </el-input>
                         </div>
                         <div class="searchBtn">
-                            <el-button @click="openSearch()">
+                            <!-- <el-button @click="openSearch()"> -->
+                            <el-button @click="search()">
                                 搜索答案
                             </el-button>
                             <el-button type="primary" @click="openCreatePost()">
                                 发表提问
                             </el-button>
+                        </div>
+                        <div class="hotKey">
+                            热词：
+                            <span v-for="item in hotKey" :key="item">{{
+                                item
+                            }}</span>
                         </div>
                     </div>
                 </el-col>
@@ -59,15 +66,27 @@ export default {
     },
     data() {
         return {
-            input3: ""
+            input3: "",
+            hotKey: [
+                "零信任",
+                "产品调研",
+                "全网行为管理",
+                "策略路由",
+                "数据库",
+                "上网策略",
+                "测试",
+                "规则库",
+                "aCMP"
+            ]
         };
     },
     methods: {
-        openSearch() {
-            this.$router.push({
-                path: "/search"
-            });
-        },
+        // openSearch() {
+        //     this.$router.push({
+        //         path: "/search"
+        //     });
+        // },
+        search() {},
         openCreatePost() {
             this.$router.push({
                 path: "/editPost"
@@ -107,5 +126,19 @@ export default {
 }
 .searchLeft {
     width: calc(100% - 230px);
+}
+.hotKey {
+    font-weight: 600;
+    padding: 12px 0;
+    font-size: 12px;
+}
+.hotKey span {
+    margin-right: 15px;
+    cursor: pointer;
+    font-weight: 400;
+    color: #6f6f6f;
+}
+.hotKey span:hover {
+    color: #00539f;
 }
 </style>

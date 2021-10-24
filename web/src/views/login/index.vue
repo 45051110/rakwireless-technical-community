@@ -17,7 +17,7 @@
 </template>
 <script>
 import { login } from "@/api/server";
-import { setToken } from "@/utils/auth";
+import { setToken, setRole } from "@/utils/auth";
 export default {
     name: "Login",
     data() {
@@ -37,17 +37,19 @@ export default {
                     if (res.data.status === 200) {
                         if (res.data.message === "success") {
                             let tempData = res.data.data;
-                            console.log(tempData);
                             setToken(tempData.token);
                             setRole(tempData.role);
+                            this.$router.push({
+                                path: "/home"
+                            });
                         } else {
-                            // this.registerSuccess = true;
-                            // this.registerResult = "注册失败!";
-                            // this.registerIcon = "error";
+                            this.$message.error(res.data.context);
                         }
                     }
                 })
-                .catch(err => {});
+                .catch(err => {
+                    this.$message.error("网络错误!");
+                });
         }
     }
 };

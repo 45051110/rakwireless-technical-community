@@ -10,7 +10,7 @@ import EditPost from '@/views/editPost/index';
 import Download from '@/views/download/index';
 import News from '@/views/news/index';
 import Blog from '@/views/blog/index';
-import Administrator from '@/views/administrator/index';
+// import Administrator from '@/views/administrator/index';
 
 Vue.use(Router);
 
@@ -18,6 +18,10 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/home'
+    },
+    {
+      path: '/home',
       name: 'Home',
       component: Home,
     },
@@ -62,11 +66,11 @@ export default new Router({
       name: 'Blog',
       component: Blog,
     },
-    {
-      path: '/administrator',
-      name: 'Administrator',
-      component: Administrator,
-    }
+    // {
+    //   path: '/administrator',
+    //   name: 'Administrator',
+    //   component: Administrator,
+    // }
 
   ],
 });

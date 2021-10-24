@@ -1,7 +1,7 @@
 <template>
     <div class="navBox">
         <div class="navbar">
-            <router-link to="/">
+            <router-link to="/home">
                 <img src="@/assets/logo.png" class="logoImg" />
             </router-link>
             <el-menu
@@ -84,8 +84,8 @@
                 >
             </el-menu>
             <div class="loginBox">
-                <span>
-                    <router-link to="/login">登录</router-link>
+                <span to="/login" @click="logInOrOut()">
+                    {{ loginWords }}
                 </span>
                 <span class="ml10">
                     <router-link to="/register">注册</router-link>
@@ -96,19 +96,43 @@
 </template>
 
 <script>
+import { getToken, removeToken } from "@/utils/auth";
 export default {
     name: "Nav",
     data() {
         return {
             activeIndex: "1",
-            activeIndex2: "1"
+            activeIndex2: "1",
+            loginWords: "登录"
         };
     },
     methods: {
+        init() {
+            if (getToken()) {
+                this.loginWords = "退出";
+            } else {
+                this.loginWords = "登录";
+            }
+        },
         handleSelect(key, keyPath) {},
         openLink(url, opt = "_self") {
             window.open(url, opt);
+        },
+        logInOrOut() {
+            if (this.loginWords === "退出") {
+                removeToken();
+                this.$router.push({
+                    path: "/home"
+                });
+            } else {
+                this.$router.push({
+                    path: "/login"
+                });
+            }
         }
+    },
+    created() {
+        this.init();
     }
 };
 </script>

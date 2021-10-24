@@ -57,7 +57,8 @@ export default {
             total: 0,
             currentPage: 1,
             pageSize: 10,
-            type: "all"
+            type: "all",
+            searchValue: ""
         };
     },
     created() {
@@ -73,6 +74,7 @@ export default {
             param.currentPage = this.currentPage;
             param.pageSize = this.pageSize;
             param.type = this.type;
+            param.searchValue = this.searchValue;
             getAnswerList(param)
                 .then(res => {
                     if (res.data.status === 200) {
