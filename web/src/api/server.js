@@ -31,7 +31,8 @@ export function getAnswerList(param) {
     {
       currentPage: param.currentPage,
       pageSize: param.pageSize,
-      type: param.type
+      type: param.type,
+      searchValue: param.searchValue
     }
   })
 }

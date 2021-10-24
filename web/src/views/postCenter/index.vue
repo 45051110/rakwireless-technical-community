@@ -20,7 +20,7 @@
                         <div class="searchLeft">
                             <el-input
                                 placeholder="请输入问题"
-                                v-model="input3"
+                                v-model="inputValue"
                                 class="input-with-select"
                             >
                                 <i
@@ -42,16 +42,19 @@
                         </div>
                         <div class="hotKey">
                             热词：
-                            <span v-for="item in hotKey" :key="item">{{
-                                item
-                            }}</span>
+                            <span
+                                v-for="item in hotKey"
+                                :key="item"
+                                @click="search(item)"
+                                >{{ item }}</span
+                            >
                         </div>
                     </div>
                 </el-col>
             </el-row>
         </div>
         <div class="post">
-            <post></post>
+            <post :searchValue="searchValue" ref="child"></post>
         </div>
     </div>
 </template>
@@ -66,7 +69,7 @@ export default {
     },
     data() {
         return {
-            input3: "",
+            inputValue: "",
             hotKey: [
                 "零信任",
                 "产品调研",
@@ -77,7 +80,8 @@ export default {
                 "测试",
                 "规则库",
                 "aCMP"
-            ]
+            ],
+            searchValue: "111"
         };
     },
     methods: {
@@ -86,7 +90,15 @@ export default {
         //         path: "/search"
         //     });
         // },
-        search() {},
+        search(hotKey) {
+            if (hotKey) {
+                this.inputValue = hotKey;
+            }
+            this.searchValue = this.inputValue;
+            setTimeout(() => {
+                this.$refs.child.getInitData(this.searchValue);
+            }, 100);
+        },
         openCreatePost() {
             this.$router.push({
                 path: "/editPost"

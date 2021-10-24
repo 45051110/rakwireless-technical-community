@@ -50,6 +50,12 @@
 import { getAnswerList } from "@/api/server";
 export default {
     name: "Post",
+    props: {
+        searchValue: {
+            type: String,
+            required: true
+        }
+    },
     data() {
         return {
             activeName: "first",
@@ -57,8 +63,7 @@ export default {
             total: 0,
             currentPage: 1,
             pageSize: 10,
-            type: "all",
-            searchValue: ""
+            type: "all"
         };
     },
     created() {

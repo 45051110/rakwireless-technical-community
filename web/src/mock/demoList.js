@@ -141,52 +141,90 @@ export default {
     }
   },
   'get|/api/getAnswerList': option => {
+    let tempUrl = option.url;
+    let array = tempUrl.split("&");
+    let pageSize = array[1].split("=")[1];
+    let type = array[2].split("=")[1];
+    let searchValue = array[3].split("=")[1];
+    if (option) {
+      console.log(array)
+      console.log(pageSize)
+      console.log(type)
+      console.log(searchValue)
+    }
+    let tempData;
+    if (type === "all") {
+      tempData = {
+        data: [
+          {
+            id: '111',
+            title: '零信任就够了吗？可能你需要精益信任',
+            content: '零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
+            author: 'SANGFOR_智安全',
+            createTime: '2021-03-23 12:30:00',
+            hasPic: true
+          },
+          {
+            id: '222',
+            title: '2零信任就够了吗？可能你需要精益信任',
+            content: '2零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
+            author: '2SANGFOR_asdsadsadasda全',
+            createTime: '2021-03-23 13:30:00',
+            hasPic: false
+          },
+          {
+            id: '333',
+            title: '2零信任就够了吗？可能你需要精益信任',
+            content: '2零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
+            author: '2SANGFOR_asdsadsadasda全',
+            createTime: '2021-03-23 13:30:00',
+            hasPic: false
+          },
+          {
+            id: '444',
+            title: '2零信任就够了吗？可能你需要精益信任',
+            content: '2零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
+            author: '2SANGFOR_asdsadsadasda全',
+            createTime: '2021-03-23 13:30:00',
+            hasPic: false
+          },
+          {
+            id: '555',
+            title: '2零信任就够了吗？可能你需要精益信任',
+            content: '2零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
+            author: '2SANGFOR_asdsadsadasda全',
+            createTime: '2021-03-23 13:30:00',
+            hasPic: false
+          }
+        ],
+        total: 100
+      }
+    } else if (type === "new") {
+      tempData = {
+        data: [
+          {
+            id: '111',
+            title: 'New零信任就够了吗？可能你需要精益信任',
+            content: '零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
+            author: 'SANGFOR_智安全',
+            createTime: '2021-03-23 12:30:00',
+            hasPic: true
+          }
+        ],
+        total: 1
+      };
+    } else {
+      tempData =
+      {
+        data: [],
+        total: 0
+      };
+    }
     return {
       status: 200,
       message: 'success',
-      data: [
-        {
-          id: '111',
-          title: '零信任就够了吗？可能你需要精益信任',
-          content: '零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
-          author: 'SANGFOR_智安全',
-          createTime: '2021-03-23 12:30:00',
-          hasPic: true
-        },
-        {
-          id: '222',
-          title: '2零信任就够了吗？可能你需要精益信任',
-          content: '2零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
-          author: '2SANGFOR_asdsadsadasda全',
-          createTime: '2021-03-23 13:30:00',
-          hasPic: false
-        },
-        {
-          id: '333',
-          title: '2零信任就够了吗？可能你需要精益信任',
-          content: '2零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
-          author: '2SANGFOR_asdsadsadasda全',
-          createTime: '2021-03-23 13:30:00',
-          hasPic: false
-        },
-        {
-          id: '444',
-          title: '2零信任就够了吗？可能你需要精益信任',
-          content: '2零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
-          author: '2SANGFOR_asdsadsadasda全',
-          createTime: '2021-03-23 13:30:00',
-          hasPic: false
-        },
-        {
-          id: '555',
-          title: '2零信任就够了吗？可能你需要精益信任',
-          content: '2零信任就够了吗？可能你需要精益信任什么是零信任,近年来，大规模数据泄露事件层出不穷。动辄上百万甚至上亿的用户信息被批量泄露，从亿万网民到政府要员都不能幸免。日益复杂且频发的网络安全攻击，使得传统基...',
-          author: '2SANGFOR_asdsadsadasda全',
-          createTime: '2021-03-23 13:30:00',
-          hasPic: false
-        }
-      ],
-      total: 100
+      data: tempData.data,
+      total: tempData.total
     }
   },
 };
